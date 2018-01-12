@@ -12,7 +12,7 @@ class GiveMoneyCommand {
 	}
 	public function onCommand(CommandSender $player, string $label, array $args): bool {
 		if (! isset ( $args [0] ) or ! is_numeric ( $args [1] )) {
-			$this->owner->msg ( $player, "다시 입력하세요," );
+			$this->owner->msg ( $player, "/돈주기 닉네임 줄돈," );
 			return true;
 		}
 		if ($this->owner->mymoney ( $player ) > $args [1]) {
