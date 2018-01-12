@@ -13,7 +13,7 @@ class AddMoneyCommand {
 	public function onCommand(CommandSender $player, string $label, array $args): bool {
 		$name = strtolower ( $player->getName () );
 		if (! isset ( $args [0] ) or ! is_numeric ( $args [1] )) {
-			$this->owner->msg ( $player, "다시 입력하세요," );
+			$this->owner->msg ( $player, "/돈주기 닉네임 ," );
 			return true;
 		}
 		if (isset ( $this->owner->mDB [$args [0]] )) {
