@@ -13,7 +13,7 @@ class SetMoneyCommand {
 	}
 	public function onCommand(CommandSender $player, string $label, array $args): bool {
 		if (! isset ( $args [0] ) or ! is_numeric ( $args [1] )) {
-			$this->owner->msg ( $player, "/돈설정 닉네임 " );
+			$this->owner->msg ( $player, "/돈설정 닉네임 돈" );
 			return true;
 		}
 		$target = $this->owner->getServer ()->getPlayer ( $args [0] );
